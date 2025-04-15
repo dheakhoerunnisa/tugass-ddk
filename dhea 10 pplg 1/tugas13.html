@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form onsubmit="return false">
+        <input type="text" id="status">
+        <label for="status">satus</label>
+        <input type="text" id="jlf">
+        <label for="jlf">JLF</label>
+        <button onclick="cek_nilai()">CEK NILAI</button>
+    </form>
+     <div id="hasil"></div>
+     <script>
+        function cek_nilai() {
+            var status = document.getElementById("hasil").value;
+            var jlf = document.getElementById("jlf").value;
+            if (status == "langganan"){
+                var hpp=75
+            }
+            else{
+                if (jlf<100){
+                    var hpp=100
+                }
+                else{
+                    HPP=85
+                }
+            }
+            let th=jlf*hpp
+            document.getElementById('hasil').innerHTML = th
+        }
+     </script>
+</body>
+</html>
